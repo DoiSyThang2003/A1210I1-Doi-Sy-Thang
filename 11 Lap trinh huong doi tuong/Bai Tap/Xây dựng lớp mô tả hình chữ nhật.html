@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+
+<body> 
+   <canvas id="Aba" height="400px" width="400px" style="border: 1px solid blue;"></canvas>
+
+<script>
+ class draw{
+    constructor (x ,y , Omo, Aba , ) {
+        this.Omo = Omo;
+        this.Aba = Aba;
+        this.x = x;
+        this.y = y;
+    }   
+       Obama () {
+        var canvas = document.getElementById("Aba")
+        var ctx = canvas.getContext("2d")
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(this.x, this.y, this.Omo, this.Aba); 
+       }          
+ } 
+  let hienHinh = new draw(0,0,60,60);
+  hienHinh.Obama ()
+</script>
+</body>
+
+</html>

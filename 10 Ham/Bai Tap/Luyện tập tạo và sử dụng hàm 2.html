@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<h3>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được</h3>
+<form>
+    Nhập số :<input type="number" id="SoDuaVao">
+    <input onclick="TinhBinhPhuong()" value="Tính" type="button">
+</form>
+<h3>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</h3>
+<form>
+    Nhập bán kính :<input type="number" id="duongkinh">
+    <input type="button" onclick="tinhChuVivaDienTich()" value="Tính">
+</form>
+<h3>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được</h3>
+<form>
+    Nhập số :<input type="number" id="giaithua">
+    <input type="button" value="Tính" onclick="tinhgiaithua()">
+</form>
+<script>
+    function TinhBinhPhuong() {
+        let soNguyen = parseInt(document.getElementById("SoDuaVao").value);
+        let binhPhuong = soNguyen*soNguyen;
+alert(binhPhuong)
+    }
+function tinhChuVivaDienTich() {
+        let banKinh = parseInt(document.getElementById("duongkinh").value);
+        let chuVi = 2 * banKinh* 3.14;
+        let dienTich = banKinh*banKinh*3.14;
+        alert("Diện tích = " +dienTich+ "  Bán kính = " + chuVi)
+}
+function tinhgiaithua() {
+let soGiaiThua = parseInt(document.getElementById("giaithua").value);
+let giaiThua = 1;
+for (i = 1; i <= soGiaiThua; i++){
+ giaiThua = giaiThua*i;
+} alert("Số giai thừa của "+ soGiaiThua + " là " + giaiThua)
+}
+</script>
+</body>
+</html>

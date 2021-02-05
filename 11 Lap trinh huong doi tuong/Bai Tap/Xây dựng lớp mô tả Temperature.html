@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+class temperature{
+    constructor(nhietdoC) {
+this.nhietdoC = nhietdoC
+    }
+    nhietdoF(){
+        alert(this.nhietdoC*33.8)
+    }
+    nhietdoK(){
+        alert(this.nhietdoC+273)
+    }
+}
+var nhietDo = new temperature(25);
+nhietDo.nhietdoF()
+nhietDo.nhietdoK()
+
+</script>
+</body>
+</html>

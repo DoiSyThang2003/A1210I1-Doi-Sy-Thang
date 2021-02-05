@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 1</title>
+</head>
+<body>
+<h3>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành</h3>
+<button onclick="bai1()">Click</button>
+<h3>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào
+    trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ
+</h3>
+<form>
+    Nhập nhiệt độ :<input id="nhietdo" type="number">
+    <input onclick="bai2()" type="button" value="Check">
+</form>
+<h3>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên</h3>
+<button onclick="bai3()">Hiển thị</button>
+<h3>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5</h3>
+<button onclick="bai4()">Tìm</button>
+<h3>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci</h3>
+<button onclick="bai5()">Tính</button>
+<h3>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</h3>
+<button onclick="bai6()">Tính</button>
+<h3>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in
+    ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz"</h3>
+<button onclick="bai7()">Chạy</button>
+<h3>Bài 8: Game đoán số</h3>
+<button onclick="bai8()">Chơi</button> <button onclick="bai8()">Chơi lại</button>
+
+
+<script>
+    function bai1() {
+        for (let a = 1; a <= 100; a++) {
+            console.log(a);
+            if (a == 99) {
+                alert("Đã hoàn thành")
+            }
+        }
+    }
+
+    function bai2() {
+        var nhietdo;
+        nhietdo = parseInt(document.getElementById("nhietdo").value);
+        if (nhietdo < 20) {
+            alert("Yêu cầu tăng nhiệt độ")
+            for (nhietdo = nhietdo; nhietdo < 30; nhietdo++) {
+                alert("Tăng nhiệt độ lên :" + nhietdo)
+            }
+        } else if (nhietdo > 100) {
+            alert("Yêu cầu giảm nhiệt độ")
+        }
+        {
+            for (nhietdo = nhietdo; nhietdo > 90; nhietdo--) {
+                alert("Giảm nhiệt độ suống :" + nhietdo)
+            }
+        }
+    }
+
+    function dayso() {
+        let a = 1;
+        let b = 3;
+        for (let i = 0; i < 20; i++) {
+            document.write(a + "<br>")
+            a += b;
+            b = a - b;
+        }
+    }
+
+    function bai7() {
+        for (let i = 1; i < 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                alert("Số FizzBuzz là " + i)
+            }
+        }
+    }
+
+    function bai8() {
+        let SoNgauNhien = Math.floor(Math.random() * 101);
+        for (let i = 0; i < 3; i++) {
+            let SoNhapVao = parseInt(prompt())
+            if (SoNgauNhien == SoNhapVao) {
+                alert("Chúc mừng")
+            } else {
+                alert("Thử lại")
+
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
